@@ -2,7 +2,7 @@
 
 A personal, offline-first audio + text tour guide PWA — built for a trip to Italy (Milan, Florence, Rome, Naples / Pompeii) and designed to grow as more places get added. **Fully free** to build, generate, and host.
 
-**Live at:** [abhibhansali.github.io](https://abhibhansali.github.io/)
+**Live at:** [abhibhansali.github.io/Tour-Guide](https://abhibhansali.github.io/Tour-Guide/)
 
 Two pieces:
 
@@ -143,7 +143,7 @@ git commit -m "Update Pantheon what_to_notice"
 git push
 ```
 
-Live in ~30 seconds at https://abhibhansali.github.io/. HTTPS for free. No CI to wait on.
+Live in ~30 seconds at https://abhibhansali.github.io/Tour-Guide/. HTTPS for free. No CI to wait on.
 
 ---
 
@@ -151,7 +151,7 @@ Live in ~30 seconds at https://abhibhansali.github.io/. HTTPS for free. No CI to
 
 Do this at home over WiFi:
 
-1. Open https://abhibhansali.github.io/ on the phone.
+1. Open https://abhibhansali.github.io/Tour-Guide/ on the phone.
 2. Wait for the **"Preparing your tour"** overlay to finish. It downloads ~180 MB of audio and photos into the browser cache. Takes 1–3 min on home WiFi.
 3. Tap **Share → Add to Home Screen** (iOS Safari) or **menu → Install app** (Android Chrome).
 4. **Critical test:** put the phone in airplane mode, force-quit the app, reopen from the home screen, navigate to any site, play a chapter. Photos and audio should both work.
@@ -194,7 +194,7 @@ Photo queries must be short (1–2 words). `"Pompeii"` works; `"Pompeii ruins Ve
 Append `?nosw` to the URL. The page detects it, unregisters any SW, wipes caches, and reloads.
 
 **Service worker doesn't register on phone via local IP**
-That's expected — SWs need HTTPS except on localhost. The deployed `https://abhibhansali.github.io/` works.
+That's expected — SWs need HTTPS except on localhost. The deployed `https://abhibhansali.github.io/Tour-Guide/` works.
 
 **Audio doesn't autoplay on iOS Safari**
 First playback must come from a user tap (browser autoplay policy). The UI only starts audio on button presses, so this is fine.
@@ -207,7 +207,7 @@ GitHub disabled password auth. Install `gh` (`brew install gh && gh auth login`)
 ## File layout
 
 ```
-abhibhansali.github.io/         ← the git repo
+Tour-Guide/                     ← the git repo (deployed at /Tour-Guide/)
 ├── content-gen/                # local content pipeline (source)
 │   ├── sites.yaml              # site/chapter list — edit to add places
 │   ├── generate.py             # edge-tts + Wikimedia pipeline

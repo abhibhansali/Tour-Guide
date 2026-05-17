@@ -72,7 +72,7 @@ Tour Guide/
 │   ├── .env                    # TTS_VOICE, TTS_RATE — gitignored
 │   ├── .env.example
 │   └── output/                 # generated files, gitignored
-# PWA files at repo root (served as-is by GitHub Pages from abhibhansali.github.io)
+# PWA files at repo root (served by GitHub Pages at abhibhansali.github.io/Tour-Guide/)
 ├── index.html
 ├── styles.css
 ├── manifest.webmanifest
@@ -95,7 +95,7 @@ Tour Guide/
 └── README.md                   # user-facing docs
 ```
 
-**Deployment:** the repo is `abhibhansali.github.io` (a GitHub user-pages repo). GitHub Pages auto-serves the root of the `main` branch at `https://abhibhansali.github.io/`. Workflow: `git push` = live in ~30 seconds. No build step, no CI.
+**Deployment:** the repo is `abhibhansali/Tour-Guide` (a GitHub project-pages repo). GitHub Pages serves the root of the `main` branch at `https://abhibhansali.github.io/Tour-Guide/`. The app uses `<base href="./">` in `index.html` + relative URLs everywhere so it works at any sub-path — don't reintroduce leading-slash absolute URLs. The service worker computes its own `SW_BASE` from `self.location.pathname` for the same reason. Workflow: `git push` = live in ~30 seconds. No build step, no CI.
 
 ## Conventions to preserve
 
