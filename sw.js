@@ -1,10 +1,17 @@
-// Service worker — cache-first for /content/*, network-first for app shell.
+// Service worker — cache-first for content/*, network-first for app shell.
 //
-// /content/ is pre-populated by install.js using the same cache name, so by
-// the time the user goes offline every audio file + photo is sitting in here.
+// Computes its own base path from its location, so the same SW works whether
+// the app is deployed at the root (https://host/) or at a subpath
+// (https://host/Tour-Guide/). At /Tour-Guide/sw.js, SW_BASE = "/Tour-Guide".
+//
+// content/ is pre-populated by install.js using the same cache name, so by the
+// time the user goes offline every audio file + photo is sitting in here.
 
-const SHELL_CACHE = "tg-shell-v2";
-const CONTENT_CACHE = "tg-content-v1";
+const SHELL_CACHE = "tg-shell-v3";
+const CONTENT_CACHE = "tg-content-v2";
+const SW_BASE = self.location.pathname.replace(/\/sw\.js$/, "");
+const CONTENT_PREFIX = SW_BASE + "/content/";
+const SHELL_FALLBACK = SW_BASE + "/";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
@@ -23,9 +30,9 @@ self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (url.pathname.startsWith("/content/")) {
+  if (url.pathname.startsWith(CONTENT_PREFIX)) {
     e.respondWith(cacheFirst(e.request, CONTENT_CACHE));
-  } else if (e.request.mode === "navigate" || url.pathname === "/" || url.pathname.endsWith(".html")) {
+  } else if (e.request.mode === "navigate" || url.pathname.endsWith(".html") || url.pathname === SHELL_FALLBACK) {
     e.respondWith(networkFirst(e.request, SHELL_CACHE));
   } else if (/\.(js|css|webmanifest|png|jpg|svg|woff2?)$/.test(url.pathname)) {
     // network-first for shell assets so JS edits don't get stuck behind cache
@@ -53,17 +60,7 @@ async function networkFirst(req, cacheName) {
     if (res.ok) cache.put(req, res.clone());
     return res;
   } catch {
-    const hit = await cache.match(req) || await cache.match("/");
+    const hit = await cache.match(req) || await cache.match(SHELL_FALLBACK);
     return hit || new Response("Offline", { status: 503 });
   }
-}
-
-async function staleWhileRevalidate(req, cacheName) {
-  const cache = await caches.open(cacheName);
-  const hit = await cache.match(req);
-  const fetchPromise = fetch(req).then(res => {
-    if (res.ok) cache.put(req, res.clone());
-    return res;
-  }).catch(() => hit);
-  return hit || fetchPromise;
 }

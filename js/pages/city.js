@@ -22,7 +22,7 @@ export async function renderCity(root, { cityId }) {
 }
 
 function siteCard(cityId, s) {
-  const thumb = s.photo?.file ? `style="background-image:url('/content/${s.photo.file}')"` : "";
+  const thumb = s.photo?.file ? `style="background-image:url('content/${s.photo.file}')"` : "";
   const badges = [];
   if (s.type === "major") badges.push(`<span class="badge major">Major</span>`);
   if (s.ticketed) badges.push(`<span class="badge ticketed">Ticketed</span>`);

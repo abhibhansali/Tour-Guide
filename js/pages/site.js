@@ -9,14 +9,14 @@ export async function renderSite(root, { cityId, siteId }) {
     return;
   }
 
-  const tips = site.tips ? await fetchText(`/content/${site.tips}`) : null;
+  const tips = site.tips ? await fetchText(`content/${site.tips}`) : null;
   const scripts = {};
   for (const ch of site.chapters) {
-    scripts[ch.id] = await fetchText(`/content/${ch.script}`);
+    scripts[ch.id] = await fetchText(`content/${ch.script}`);
   }
 
   const hero = site.photo?.file
-    ? `<div class="site-hero" style="background-image:url('/content/${site.photo.file}')"></div>`
+    ? `<div class="site-hero" style="background-image:url('content/${site.photo.file}')"></div>`
     : "";
   const credit = site.photo?.credit
     ? `<div class="photo-credit">Photo: ${escapeHtml(site.photo.credit.title || "")} · ${escapeHtml(site.photo.credit.license || "")} · <a href="${site.photo.credit.sourceUrl}" target="_blank" rel="noopener">source</a></div>`

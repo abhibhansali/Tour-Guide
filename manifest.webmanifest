@@ -2,15 +2,15 @@
   "name": "Italy Tour Guide",
   "short_name": "Italy Tour",
   "description": "Personal audio tour guide for our Italy trip.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fdf6ec",
   "theme_color": "#7a2e1f",
   "icons": [
     {
-      "src": "/icons/icon.svg",
+      "src": "icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"

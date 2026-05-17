@@ -9,12 +9,12 @@ const VERSION_KEY = "contentVersion";
 export async function ensureContentCached() {
   if (!("serviceWorker" in navigator)) return;
 
-  const reg = await navigator.serviceWorker.register("/sw.js");
+  const reg = await navigator.serviceWorker.register("sw.js");
   await navigator.serviceWorker.ready;
 
   let manifest;
   try {
-    const res = await fetch("/content/manifest.json", { cache: "no-cache" });
+    const res = await fetch("content/manifest.json", { cache: "no-cache" });
     if (!res.ok) return; // no content yet — handled by Home page
     manifest = await res.json();
   } catch {
@@ -29,15 +29,17 @@ export async function ensureContentCached() {
 }
 
 function collectUrls(manifest) {
-  const urls = ["/content/manifest.json"];
+  // Relative URLs — resolved against the document's <base href>, so this works
+  // whether the app is deployed at the root or under a subpath like /Tour-Guide/.
+  const urls = ["content/manifest.json"];
   for (const city of manifest.cities) {
     for (const site of city.sites) {
       for (const ch of site.chapters) {
-        urls.push(`/content/${ch.audio}`);
-        urls.push(`/content/${ch.script}`);
+        urls.push(`content/${ch.audio}`);
+        urls.push(`content/${ch.script}`);
       }
-      if (site.tips) urls.push(`/content/${site.tips}`);
-      if (site.photo?.file) urls.push(`/content/${site.photo.file}`);
+      if (site.tips) urls.push(`content/${site.tips}`);
+      if (site.photo?.file) urls.push(`content/${site.photo.file}`);
     }
   }
   return urls;

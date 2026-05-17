@@ -57,7 +57,7 @@ export function playChapter(site, chapter, queue = null, queueIndex = 0) {
     queueIndex,
     autoAdvance,
   };
-  audio.src = "/content/" + chapter.audio;
+  audio.src = "content/" + chapter.audio;
   audio.playbackRate = get("playbackRate", 1);
   const saved = get(`pos.${site.id}.${chapter.id}`, 0);
   audio.currentTime = saved > 1 && saved < 1e6 ? saved : 0;
@@ -71,7 +71,7 @@ function playFromQueue(i) {
   const chapter = current.queue[i];
   current.chapter = chapter;
   current.queueIndex = i;
-  audio.src = "/content/" + chapter.audio;
+  audio.src = "content/" + chapter.audio;
   audio.playbackRate = get("playbackRate", 1);
   audio.currentTime = 0;
   audio.play();
