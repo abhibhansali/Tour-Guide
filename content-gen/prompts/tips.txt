@@ -1,0 +1,12 @@
+Write a short "practical tips" block for travelers visiting {{site_name}} in {{city_name}}.
+
+Cover what's genuinely useful in person:
+- Best time of day to arrive (avoiding crowds, light)
+- Entry/queue tips, ticket gotchas, security checks
+- Dress code (especially for religious sites — Vatican, basilicas, cathedrals)
+- Photography rules and where flash/tripod is restricted
+- What to skip or what's overrated
+- Bathroom and water-fountain tips if relevant
+- Pickpocket-prone areas to be aware of
+
+Format: 6–10 short bullet points. Each bullet one sentence, plain text. No headings, no markdown formatting characters (no asterisks, no dashes at the start — just one item per line). Skip generic advice they could find on any travel blog. Focus on the specific.

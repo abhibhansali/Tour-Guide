@@ -1,0 +1,270 @@
+# Edit this file freely, then re-run `npm run gen`.
+# Generation is idempotent — already-generated chapters are skipped unless --force.
+#
+# Chapter types (defined in prompts/):
+#   arrival        — orientation, what you're looking at, first impressions
+#   history        — when/why/how it was built; the people behind it
+#   architecture   — what to look for, key features, design language
+#   stories        — anecdotes, legends, scandals, human moments
+#   what_to_notice — easy-to-miss details once you're there
+#   bigger_picture — how this fits the broader era / Italian history
+#   short          — single 5-8 min combined chapter (for smaller sites)
+
+cities:
+  - id: milan
+    name: Milan
+    blurb: Italy's fashion and finance capital, with a Gothic masterpiece at its heart.
+    sites:
+      - id: duomo
+        name: Milan Cathedral (Duomo di Milano)
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, stories, what_to_notice]
+        photo_query: "Milan Cathedral facade"
+        practical_tips: true
+      - id: galleria
+        name: Galleria Vittorio Emanuele II
+        type: short
+        chapters: [short]
+        photo_query: "Galleria Vittorio Emanuele Milan"
+        practical_tips: false
+      - id: sforza
+        name: Sforza Castle
+        type: short
+        chapters: [short]
+        photo_query: "Castello Sforzesco"
+        practical_tips: false
+      - id: last_supper
+        name: The Last Supper (Cenacolo)
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "Last Supper Leonardo"
+        practical_tips: true
+      - id: brera
+        name: Pinacoteca di Brera
+        type: major
+        ticketed: true
+        chapters: [arrival, history, what_to_notice, stories]
+        photo_query: "Pinacoteca di Brera"
+        practical_tips: true
+      - id: la_scala
+        name: Teatro alla Scala
+        type: short
+        chapters: [short]
+        photo_query: "Teatro alla Scala"
+        practical_tips: false
+      - id: navigli
+        name: Navigli District
+        type: short
+        chapters: [short]
+        photo_query: "Navigli Milan"
+        practical_tips: false
+
+  - id: florence
+    name: Florence
+    blurb: The cradle of the Renaissance — every street corner is a museum.
+    sites:
+      - id: duomo
+        name: Florence Cathedral & Brunelleschi's Dome
+        type: major
+        chapters: [arrival, history, architecture, stories, what_to_notice]
+        photo_query: "Florence Duomo"
+        practical_tips: true
+      - id: ponte_vecchio
+        name: Ponte Vecchio
+        type: short
+        chapters: [short]
+        photo_query: "Ponte Vecchio"
+        practical_tips: false
+      - id: piazza_signoria
+        name: Piazza della Signoria
+        type: short
+        chapters: [short]
+        photo_query: "Piazza della Signoria"
+        practical_tips: false
+      - id: piazzale_michelangelo
+        name: Piazzale Michelangelo
+        type: short
+        chapters: [short]
+        photo_query: "Piazzale Michelangelo"
+        practical_tips: false
+      - id: uffizi
+        name: Uffizi Gallery
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, stories, what_to_notice]
+        photo_query: "Uffizi Gallery"
+        practical_tips: true
+      - id: accademia
+        name: Accademia Gallery (David)
+        type: major
+        ticketed: true
+        chapters: [arrival, history, what_to_notice, stories]
+        photo_query: "David Michelangelo Accademia"
+        practical_tips: true
+      - id: pitti
+        name: Pitti Palace & Boboli Gardens
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "Palazzo Pitti"
+        practical_tips: true
+      - id: santa_croce
+        name: Basilica of Santa Croce
+        type: major
+        ticketed: true
+        chapters: [arrival, history, what_to_notice, stories]
+        photo_query: "Santa Croce Florence"
+        practical_tips: true
+      - id: san_lorenzo
+        name: San Lorenzo & Medici Chapels
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "Medici Chapel Florence"
+        practical_tips: true
+
+  - id: rome
+    name: Rome
+    blurb: Three thousand years of history layered into a single walkable city.
+    sites:
+      - id: colosseum
+        name: Colosseum
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, stories, what_to_notice]
+        photo_query: "Colosseum"
+        practical_tips: true
+      - id: roman_forum
+        name: Roman Forum & Palatine Hill
+        type: major
+        chapters: [arrival, history, what_to_notice, bigger_picture]
+        photo_query: "Roman Forum"
+        practical_tips: true
+      - id: vatican_museums
+        name: Vatican Museums
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, stories, what_to_notice]
+        photo_query: "Vatican Museums"
+        practical_tips: true
+      - id: sistine_chapel
+        name: Sistine Chapel
+        type: major
+        chapters: [arrival, history, what_to_notice, stories]
+        photo_query: "Sistine Chapel ceiling"
+        practical_tips: true
+      - id: st_peters
+        name: St. Peter's Basilica
+        type: major
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "St Peter's Basilica interior"
+        practical_tips: true
+      - id: trevi
+        name: Trevi Fountain
+        type: short
+        chapters: [short]
+        photo_query: "Trevi Fountain Rome"
+        practical_tips: false
+      - id: pantheon
+        name: Pantheon
+        type: short
+        chapters: [arrival, history, what_to_notice]
+        photo_query: "Pantheon Rome"
+        practical_tips: true
+      - id: piazza_navona
+        name: Piazza Navona
+        type: short
+        chapters: [short]
+        photo_query: "Piazza Navona"
+        practical_tips: false
+      - id: castel_sant_angelo
+        name: Castel Sant'Angelo
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "Castel Sant Angelo"
+        practical_tips: true
+      - id: borghese
+        name: Galleria Borghese
+        type: major
+        ticketed: true
+        chapters: [arrival, history, stories, what_to_notice]
+        photo_query: "Galleria Borghese"
+        practical_tips: true
+      - id: capitoline
+        name: Capitoline Hill & Museums
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "Capitoline Hill Rome"
+        practical_tips: true
+      - id: spanish_steps
+        name: Spanish Steps
+        type: short
+        chapters: [short]
+        photo_query: "Spanish Steps Rome"
+        practical_tips: false
+      - id: trastevere
+        name: Trastevere
+        type: short
+        chapters: [short]
+        photo_query: "Trastevere Rome"
+        practical_tips: false
+      - id: santa_maria_maggiore
+        name: Santa Maria Maggiore
+        type: short
+        chapters: [short]
+        photo_query: "Santa Maria Maggiore"
+        practical_tips: false
+
+  - id: naples
+    name: Naples & Pompeii
+    blurb: Vesuvius's shadow, ancient Roman daily life frozen in ash, and a city that defies tourism.
+    sites:
+      - id: pompeii
+        name: Pompeii
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, stories, what_to_notice, bigger_picture]
+        photo_query: "Pompeii"
+        practical_tips: true
+      - id: naples_centro
+        name: Naples Historic Center (Spaccanapoli)
+        type: short
+        chapters: [short]
+        photo_query: "Spaccanapoli Naples"
+        practical_tips: false
+      - id: vesuvius
+        name: Mount Vesuvius
+        type: short
+        chapters: [short]
+        photo_query: "Mount Vesuvius"
+        practical_tips: false
+      - id: archaeological_museum
+        name: National Archaeological Museum
+        type: major
+        ticketed: true
+        chapters: [arrival, history, what_to_notice, stories]
+        photo_query: "Naples Archaeological Museum"
+        practical_tips: true
+      - id: herculaneum
+        name: Herculaneum
+        type: major
+        ticketed: true
+        chapters: [arrival, history, architecture, what_to_notice]
+        photo_query: "Herculaneum"
+        practical_tips: true
+      - id: cappella_sansevero
+        name: Cappella Sansevero (Veiled Christ)
+        type: short
+        chapters: [short]
+        photo_query: "Veiled Christ Sanmartino"
+        practical_tips: false
+      - id: castel_nuovo
+        name: Castel Nuovo
+        type: short
+        chapters: [short]
+        photo_query: "Castel Nuovo Naples"
+        practical_tips: false

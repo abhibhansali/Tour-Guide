@@ -1,0 +1,14 @@
+# Local-only files
+.DS_Store
+*.log
+.env
+.env.local
+__pycache__/
+*.pyc
+.venv/
+
+# Generation working directory — regeneratable, not deployed
+content-gen/output/
+
+# Note: content/ at the repo root IS committed.
+# GitHub Pages serves it as the offline content bundle for the PWA.

@@ -1,0 +1,30 @@
+{
+  "arrival": {
+    "title": "Arrival & Orientation",
+    "prompt": "Write the opening chapter for the audio tour of {{site_name}} in {{city_name}}. This plays as they approach or first arrive. Orient them: what they're looking at, what's around them, the scale and feel of the place, what to expect from the visit. Set up the chapters that follow without naming them. End on a hook that makes them want to keep listening."
+  },
+  "history": {
+    "title": "History",
+    "prompt": "Write the history chapter for the audio tour of {{site_name}} in {{city_name}}. Cover: when and why it was built, who was behind it, what happened here over the centuries, how it survived (or didn't) into the present. Names, dates, turning points. Make it a story, not a timeline."
+  },
+  "architecture": {
+    "title": "Architecture & Key Features",
+    "prompt": "Write the architecture chapter for the audio tour of {{site_name}} in {{city_name}}. Focus on what they should look at and why it matters — specific features, materials, design choices, the architect's intent and constraints. Help them see the building as the architect saw it. Be concrete about what to look up at, look down at, look for."
+  },
+  "stories": {
+    "title": "Stories & Legends",
+    "prompt": "Write the stories chapter for the audio tour of {{site_name}} in {{city_name}}. Anecdotes, rivalries, scandals, legends, human moments — the stuff that doesn't show up on a placard. Bernini and Borromini if it's Rome. Gladiator stories if it's the Colosseum. The Medici if it's Florence. Pick two or three good ones rather than many shallow ones."
+  },
+  "what_to_notice": {
+    "title": "What to Notice",
+    "prompt": "Write the 'what to notice' chapter for the audio tour of {{site_name}} in {{city_name}}. Easy-to-miss details once they're actually on site: a specific carving, an inscription, the way light hits at a certain spot, a graffito, a repair mark, a thing locals know that tourists walk past. Give them the eyes of someone who's been many times."
+  },
+  "bigger_picture": {
+    "title": "The Bigger Picture",
+    "prompt": "Write the 'bigger picture' chapter for the audio tour of {{site_name}} in {{city_name}}. How does this place fit into the broader story of Italy, the Roman world, the Renaissance, or whatever era it belongs to? Connect it to other things they've seen or will see on this trip. Leave them with something to think about."
+  },
+  "short": {
+    "title": "Tour",
+    "prompt": "Write a single 5–8 minute combined tour of {{site_name}} in {{city_name}}. Briefly: where they are, why it matters, the most interesting historical or human story, and what specifically to notice while they're there. Output about 700–800 words for this one (longer than a normal chapter since it's the whole tour)."
+  }
+}
