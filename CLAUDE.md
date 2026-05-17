@@ -117,13 +117,9 @@ Tour Guide/
 
 ## Deploying
 
-Three free options (in order of friction):
+**Current setup: GitHub Pages project-pages** at `abhibhansali.github.io/Tour-Guide/`. `git push` triggers a redeploy in ~30 seconds. The app uses `<base href="./">` + relative URLs + a service worker that computes its own `SW_BASE` from `self.location.pathname` so it works at any sub-path. Do not reintroduce leading-slash absolute URLs.
 
-1. **Netlify Drop** — drag `app/` into [app.netlify.com/drop](https://app.netlify.com/drop). No CLI install. Easiest for one-off deploys.
-2. **GitHub Pages** — push the repo, set Pages source to `/app`. Good if you want versioning.
-3. **Vercel** — connect the GitHub repo via the web UI, root dir = `app`, framework = Other, no build command.
-
-Service workers require HTTPS — all three options provide HTTPS for free. Local dev on `localhost` is allowed without HTTPS.
+Service workers require HTTPS — GitHub Pages provides it for free. Local dev on `localhost` is allowed without HTTPS.
 
 ## Trip dates / status
 
@@ -143,8 +139,23 @@ If asked to add features:
 - **Editing wording of an existing chapter:** edit the `.txt` file in `content-gen/scripts/{city}/{site}/`, delete the matching `.mp3` in `content-gen/output/{city}/{site}/`, re-run `generate.py`. Only the changed chapter regenerates.
 - **Changing voice:** edit `TTS_VOICE` in `content-gen/.env`, then `python generate.py --force` (or delete the `.mp3` files first to keep scripts).
 - **Changing tone for new writing:** edit `prompts/system.txt` for your own reference — but you (Claude) are the one writing the new chapters; the file isn't fed to anything at runtime.
-- **Visual tweaks:** edit `app/styles.css`. The color palette uses terracotta (`#7a2e1f`) + cream (`#fdf6ec`) + Playfair Display / Inter — Italian-themed, not corporate.
+- **Visual tweaks:** edit `styles.css` (at repo root). The color palette uses terracotta (`#7a2e1f`) + cream (`#fdf6ec`) + Playfair Display / Inter — Italian-themed, not corporate.
 
 Chapter writing style (lifted from `prompts/system.txt`): 350–450 words, conversational, present-tense, concrete details, no clichés. Address them as "you". Don't open with "Welcome to" or "step back in time". Don't end with "Enjoy your visit." Spell out numbers under twenty; say "seventy-nine A.D." not "79 AD".
 
 If asked to add real authentication or move off free services: stop and confirm with Abhishek first. The free + simple constraint is load-bearing.
+
+## Future direction: globe home page (when country #2 is added)
+
+The app is currently Italy-only and the home page is a flat list of four cities. When a second country is added, Abhishek wants the home page to become an interactive world globe where you tap a country to drill into its cities, with available countries visually highlighted. **Don't build this until country #2 exists** — a globe with one country highlighted is overkill and the implementation is cheaper and more obvious once the second country shapes the design.
+
+When the time comes, the planned approach (within our zero-build, zero-dependency constraints):
+
+1. **Data model.** Add a `country` field to each city in `sites.yaml` (ISO 3166 alpha-2 codes: `IT`, `JP`, etc.). `generate.py` groups cities by country in `manifest.json` — new top-level shape: `{ countries: [{ code, name, cities: [...] }] }`.
+2. **Routes.** Add `/country/:isoCode` between `/` (now a country selector) and `/city/:cityId`. The existing `/city/:cityId` route stays unchanged — country pages link straight to cities.
+3. **Map.** Use a static SVG world map with ISO codes as `id` attributes on each `<path>` (the Wikimedia public-domain `BlankMap-World.svg` is the canonical source; ~150–300 KB after minification). Inline it in `home.js` so click handlers can attach to the path elements directly. CSS rules color countries with content (terracotta fill) versus muted gray for the rest, driven by `data-has-content="true"` set at render time.
+4. **Tiny countries.** Vatican, Monaco, Singapore, etc. are unclickable at thumbnail size. Either grow their tap targets at render time (offset overlay), or supplement the map with a scrollable list of available countries below it as a fallback. Decide based on which countries are actually in the app.
+5. **No 3D globe library.** `globe.gl`, `three-globe`, and `d3-geo` all add npm dependencies or build complexity. We don't use them. A 2D world map projected statically is enough and keeps the no-build constraint intact.
+6. **Cache size.** The SVG map is a one-time download. Add it to the install.js pre-cache list so it stays offline.
+
+Ask Abhishek what country #2 is when he raises this — it shapes the design (continent placement, RTL languages, regional clustering).
