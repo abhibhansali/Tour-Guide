@@ -26,5 +26,9 @@
   "short": {
     "title": "Tour",
     "prompt": "Write a single 5–8 minute combined tour of {{site_name}} in {{city_name}}. Briefly: where they are, why it matters, the most interesting historical or human story, and what specifically to notice while they're there. Output about 700–800 words for this one (longer than a normal chapter since it's the whole tour)."
+  },
+  "overview": {
+    "title": "About the City",
+    "prompt": "Write a single 8–10 minute city overview for {{city_name}}. Cover, in this rough order: where the name comes from, ancient and medieval history, key people and turning points, scientific significance / discoveries / inventions tied to the city, and what the city means in the modern world. About 1200–1500 words. Lean into nerd-friendly detail: specific dates, named figures, materials science, engineering, astronomy when applicable. Conversational, present-tense where natural, no clichés."
   }
 }

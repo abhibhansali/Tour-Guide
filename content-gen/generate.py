@@ -76,8 +76,73 @@ def main() -> None:
     missing: list[str] = []
 
     for city in config["cities"]:
-        city_entry = {"id": city["id"], "name": city["name"], "blurb": city.get("blurb", ""), "sites": []}
+        city_entry = {
+            "id": city["id"],
+            "name": city["name"],
+            "blurb": city.get("blurb", ""),
+            "chapters": [],
+            "photo": None,
+            "sites": [],
+        }
         manifest["cities"].append(city_entry)
+
+        # ---- City-level chapters + hero photo (new) ----
+        # Skip if --site is set and doesn't target this city.
+        site_filter_targets_this_city = (
+            not args.site or args.site.split("/")[0] == city["id"]
+        )
+
+        if site_filter_targets_this_city:
+            city_out_dir = OUT_DIR / city["id"]
+            city_out_dir.mkdir(parents=True, exist_ok=True)
+            scripts_city_dir = SCRIPTS_DIR / city["id"]
+
+            for chapter_id in city.get("chapters", []):
+                if chapter_id not in chapter_titles:
+                    print(f"  ! unknown chapter type '{chapter_id}' — skipping")
+                    continue
+                src_txt = scripts_city_dir / f"{chapter_id}.txt"
+                out_txt = city_out_dir / f"{chapter_id}.txt"
+                if src_txt.exists():
+                    script = src_txt.read_text()
+                    out_txt.write_text(script)
+                elif out_txt.exists():
+                    script = out_txt.read_text()
+                else:
+                    missing.append(str(src_txt))
+                    print(f"  ! [city-script] {city['id']}/{chapter_id} MISSING — expected at {src_txt}")
+                    continue
+                mp3_path = city_out_dir / f"{chapter_id}.mp3"
+                if not args.skip_tts:
+                    if mp3_path.exists() and not args.force:
+                        print(f"  ✓ [city-tts] {city['id']}/{chapter_id} cached")
+                    else:
+                        print(f"  • [city-tts] {city['id']}/{chapter_id}…")
+                        asyncio.run(synthesize(script, mp3_path, voice, rate))
+                city_entry["chapters"].append({
+                    "id": chapter_id,
+                    "title": chapter_titles[chapter_id]["title"],
+                    "script": rel(out_txt),
+                    "audio": rel(mp3_path),
+                    "words": len(script.split()),
+                })
+
+            if not args.skip_photos and city.get("photo_query"):
+                photo_path = city_out_dir / "photo.jpg"
+                photo_json_path = city_out_dir / "photo.json"
+                if photo_path.exists() and not args.force:
+                    print(f"  ✓ [city-photo] {city['id']} cached")
+                    credit = json.loads(photo_json_path.read_text())
+                    city_entry["photo"] = {"file": rel(photo_path), "credit": credit}
+                else:
+                    print(f"  • [city-photo] {city['id']} searching Wikimedia for '{city['photo_query']}'…")
+                    res = fetch_wikimedia_photo(city["photo_query"])
+                    if res:
+                        photo_path.write_bytes(res["bytes"])
+                        photo_json_path.write_text(json.dumps(res["credit"], indent=2))
+                        city_entry["photo"] = {"file": rel(photo_path), "credit": res["credit"]}
+                    else:
+                        print(f"  ! [city-photo] no result for '{city['photo_query']}'")
 
         for site in city["sites"]:
             if args.site and args.site != f"{city['id']}/{site['id']}":

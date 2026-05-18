@@ -33,6 +33,16 @@ function collectUrls(manifest) {
   // whether the app is deployed at the root or under a subpath like /Tour-Guide/.
   const urls = ["content/manifest.json"];
   for (const city of manifest.cities) {
+    // City-level overview chapters and hero photo
+    if (Array.isArray(city.chapters)) {
+      for (const ch of city.chapters) {
+        urls.push(`content/${ch.audio}`);
+        urls.push(`content/${ch.script}`);
+      }
+    }
+    if (city.photo?.file) urls.push(`content/${city.photo.file}`);
+
+    // Per-site content
     for (const site of city.sites) {
       for (const ch of site.chapters) {
         urls.push(`content/${ch.audio}`);

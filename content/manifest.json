@@ -1,11 +1,29 @@
 {
-  "generatedAt": "2026-05-17T13:14:36.508471Z",
+  "generatedAt": "2026-05-18T18:18:37.634717Z",
   "voice": "en-US-AndrewMultilingualNeural",
   "cities": [
     {
       "id": "milan",
       "name": "Milan",
       "blurb": "Italy's fashion and finance capital, with a Gothic masterpiece at its heart.",
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "milan/overview.txt",
+          "audio": "milan/overview.mp3",
+          "words": 1314
+        }
+      ],
+      "photo": {
+        "file": "milan/photo.jpg",
+        "credit": {
+          "title": "File:Full Milan skyline from Duomo roof.jpg",
+          "artist": "Daniel Case",
+          "license": "CC BY-SA 3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Full_Milan_skyline_from_Duomo_roof.jpg"
+        }
+      },
       "sites": [
         {
           "id": "duomo",
@@ -258,6 +276,24 @@
       "id": "florence",
       "name": "Florence",
       "blurb": "The cradle of the Renaissance \u2014 every street corner is a museum.",
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "florence/overview.txt",
+          "audio": "florence/overview.mp3",
+          "words": 1359
+        }
+      ],
+      "photo": {
+        "file": "florence/photo.jpg",
+        "credit": {
+          "title": "File:FlorenceSkyline.jpg",
+          "artist": "Infrogmation",
+          "license": "CC BY-SA 4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:FlorenceSkyline.jpg"
+        }
+      },
       "sites": [
         {
           "id": "duomo",
@@ -630,6 +666,24 @@
       "id": "rome",
       "name": "Rome",
       "blurb": "Three thousand years of history layered into a single walkable city.",
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "rome/overview.txt",
+          "audio": "rome/overview.mp3",
+          "words": 1345
+        }
+      ],
+      "photo": {
+        "file": "rome/photo.jpg",
+        "credit": {
+          "title": "File:Rome Georgia Skyline 3.jpg",
+          "artist": "BOB H",
+          "license": "CC BY-SA 4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rome_Georgia_Skyline_3.jpg"
+        }
+      },
       "sites": [
         {
           "id": "colosseum",
@@ -1183,6 +1237,24 @@
       "id": "naples",
       "name": "Naples & Pompeii",
       "blurb": "Vesuvius's shadow, ancient Roman daily life frozen in ash, and a city that defies tourism.",
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "naples/overview.txt",
+          "audio": "naples/overview.mp3",
+          "words": 1397
+        }
+      ],
+      "photo": {
+        "file": "naples/photo.jpg",
+        "credit": {
+          "title": "File:Skyline Napoli.jpg",
+          "artist": "Shapiro1983 at Italian Wikipedia",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skyline_Napoli.jpg"
+        }
+      },
       "sites": [
         {
           "id": "pompeii",

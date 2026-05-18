@@ -14,6 +14,8 @@ cities:
   - id: milan
     name: Milan
     blurb: Italy's fashion and finance capital, with a Gothic masterpiece at its heart.
+    chapters: [overview]
+    photo_query: "Milan skyline"
     sites:
       - id: duomo
         name: Milan Cathedral (Duomo di Milano)
@@ -64,6 +66,8 @@ cities:
   - id: florence
     name: Florence
     blurb: The cradle of the Renaissance — every street corner is a museum.
+    chapters: [overview]
+    photo_query: "Florence skyline"
     sites:
       - id: duomo
         name: Florence Cathedral & Brunelleschi's Dome
@@ -128,6 +132,8 @@ cities:
   - id: rome
     name: Rome
     blurb: Three thousand years of history layered into a single walkable city.
+    chapters: [overview]
+    photo_query: "Rome skyline"
     sites:
       - id: colosseum
         name: Colosseum
@@ -222,6 +228,8 @@ cities:
   - id: naples
     name: Naples & Pompeii
     blurb: Vesuvius's shadow, ancient Roman daily life frozen in ash, and a city that defies tourism.
+    chapters: [overview]
+    photo_query: "Naples Italy skyline"
     sites:
       - id: pompeii
         name: Pompeii
