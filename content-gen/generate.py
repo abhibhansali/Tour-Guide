@@ -231,8 +231,15 @@ def main() -> None:
             city_entry["sites"].append(site_entry)
 
     manifest_path = OUT_DIR / "manifest.json"
-    manifest_path.write_text(json.dumps(manifest, indent=2))
-    print(f"\n✓ wrote {manifest_path}")
+    if args.site:
+        # --site builds a partial manifest (only the filtered city/site). Writing it
+        # would overwrite the canonical manifest with stripped data — exactly the bug
+        # that shipped Rome's overview without any sites. Skip the write; rerun the
+        # full pipeline (no --site) to update the deployable manifest.
+        print(f"\n(skipping manifest write — --site is set; run without --site to rebuild manifest.json)")
+    else:
+        manifest_path.write_text(json.dumps(manifest, indent=2))
+        print(f"\n✓ wrote {manifest_path}")
 
     if missing:
         print(f"\n! {len(missing)} script file(s) missing — fill these in then re-run:")
