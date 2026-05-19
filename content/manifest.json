@@ -1,22 +1,666 @@
 {
-  "generatedAt": "2026-05-19T08:53:53.476006Z",
+  "generatedAt": "2026-05-19T08:55:25.590797Z",
   "voice": "en-US-AndrewMultilingualNeural",
   "cities": [
     {
       "id": "milan",
       "name": "Milan",
       "blurb": "Italy's fashion and finance capital, with a Gothic masterpiece at its heart.",
-      "chapters": [],
-      "photo": null,
-      "sites": []
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "milan/overview.txt",
+          "audio": "milan/overview.mp3",
+          "words": 1314
+        }
+      ],
+      "photo": {
+        "file": "milan/photo.jpg",
+        "credit": {
+          "title": "File:Full Milan skyline from Duomo roof.jpg",
+          "artist": "Daniel Case",
+          "license": "CC BY-SA 3.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Full_Milan_skyline_from_Duomo_roof.jpg"
+        }
+      },
+      "sites": [
+        {
+          "id": "duomo",
+          "name": "Milan Cathedral (Duomo di Milano)",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "milan/duomo/arrival.txt",
+              "audio": "milan/duomo/arrival.mp3",
+              "words": 438
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "milan/duomo/history.txt",
+              "audio": "milan/duomo/history.mp3",
+              "words": 468
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "milan/duomo/architecture.txt",
+              "audio": "milan/duomo/architecture.mp3",
+              "words": 509
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "milan/duomo/stories.txt",
+              "audio": "milan/duomo/stories.mp3",
+              "words": 493
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "milan/duomo/what_to_notice.txt",
+              "audio": "milan/duomo/what_to_notice.mp3",
+              "words": 460
+            }
+          ],
+          "tips": "milan/duomo/tips.txt",
+          "photo": {
+            "file": "milan/duomo/photo.jpg",
+            "credit": {
+              "title": "File:20110724 Milan Cathedral 5260.jpg",
+              "artist": "Jakub Ha\u0142un",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:20110724_Milan_Cathedral_5260.jpg"
+            }
+          }
+        },
+        {
+          "id": "galleria",
+          "name": "Galleria Vittorio Emanuele II",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "milan/galleria/short.txt",
+              "audio": "milan/galleria/short.mp3",
+              "words": 657
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "milan/galleria/photo.jpg",
+            "credit": {
+              "title": "File:Milano, Duomo with Milan Cathedral and Galleria Vittorio Emanuele II, 2016.jpg",
+              "artist": "Steffen Schmitz",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milano,_Duomo_with_Milan_Cathedral_and_Galleria_Vittorio_Emanuele_II,_2016.jpg"
+            }
+          }
+        },
+        {
+          "id": "sforza",
+          "name": "Sforza Castle",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "milan/sforza/short.txt",
+              "audio": "milan/sforza/short.mp3",
+              "words": 667
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "milan/sforza/photo.jpg",
+            "credit": {
+              "title": "File:Stained Glass Coat of Arms dated 1674, Sforza Castle, Milan.jpg",
+              "artist": "Julian Lupyan",
+              "license": "CC0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stained_Glass_Coat_of_Arms_dated_1674,_Sforza_Castle,_Milan.jpg"
+            }
+          }
+        },
+        {
+          "id": "last_supper",
+          "name": "The Last Supper (Cenacolo)",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "milan/last_supper/arrival.txt",
+              "audio": "milan/last_supper/arrival.mp3",
+              "words": 424
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "milan/last_supper/history.txt",
+              "audio": "milan/last_supper/history.mp3",
+              "words": 458
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "milan/last_supper/architecture.txt",
+              "audio": "milan/last_supper/architecture.mp3",
+              "words": 455
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "milan/last_supper/what_to_notice.txt",
+              "audio": "milan/last_supper/what_to_notice.mp3",
+              "words": 481
+            }
+          ],
+          "tips": "milan/last_supper/tips.txt",
+          "photo": {
+            "file": "milan/last_supper/photo.jpg",
+            "credit": {
+              "title": "File:Leonardo da Vinci (1452-1519) - The Last Supper (1495-1498).jpg",
+              "artist": "Leonardo da Vinci",
+              "license": "Public domain",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_(1452-1519)_-_The_Last_Supper_(1495-1498).jpg"
+            }
+          }
+        },
+        {
+          "id": "brera",
+          "name": "Pinacoteca di Brera",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "milan/brera/arrival.txt",
+              "audio": "milan/brera/arrival.mp3",
+              "words": 406
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "milan/brera/history.txt",
+              "audio": "milan/brera/history.mp3",
+              "words": 435
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "milan/brera/what_to_notice.txt",
+              "audio": "milan/brera/what_to_notice.mp3",
+              "words": 497
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "milan/brera/stories.txt",
+              "audio": "milan/brera/stories.mp3",
+              "words": 535
+            }
+          ],
+          "tips": "milan/brera/tips.txt",
+          "photo": {
+            "file": "milan/brera/photo.jpg",
+            "credit": {
+              "title": "File:El Beso (Pinacoteca de Brera, Mil\u00e1n, 1859).jpg",
+              "artist": "Francesco Hayez",
+              "license": "Public domain",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:El_Beso_(Pinacoteca_de_Brera,_Mil%C3%A1n,_1859).jpg"
+            }
+          }
+        },
+        {
+          "id": "la_scala",
+          "name": "Teatro alla Scala",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "milan/la_scala/short.txt",
+              "audio": "milan/la_scala/short.mp3",
+              "words": 640
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "milan/la_scala/photo.jpg",
+            "credit": {
+              "title": "File:Giuseppe Barberis - Carlo Cornaglia - Giuseppe Verdi's Don Carlo at La Scala.jpg",
+              "artist": "Adam Cuerden",
+              "license": "Public domain",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giuseppe_Barberis_-_Carlo_Cornaglia_-_Giuseppe_Verdi%27s_Don_Carlo_at_La_Scala.jpg"
+            }
+          }
+        },
+        {
+          "id": "navigli",
+          "name": "Navigli District",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "milan/navigli/short.txt",
+              "audio": "milan/navigli/short.mp3",
+              "words": 581
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "milan/navigli/photo.jpg",
+            "credit": {
+              "title": "File:Milan Navigli houseboat.jpg",
+              "artist": "opethpainter",
+              "license": "CC BY 2.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milan_Navigli_houseboat.jpg"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "florence",
       "name": "Florence",
       "blurb": "The cradle of the Renaissance \u2014 every street corner is a museum.",
-      "chapters": [],
-      "photo": null,
-      "sites": []
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "florence/overview.txt",
+          "audio": "florence/overview.mp3",
+          "words": 1359
+        }
+      ],
+      "photo": {
+        "file": "florence/photo.jpg",
+        "credit": {
+          "title": "File:FlorenceSkyline.jpg",
+          "artist": "Infrogmation",
+          "license": "CC BY-SA 4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:FlorenceSkyline.jpg"
+        }
+      },
+      "sites": [
+        {
+          "id": "duomo",
+          "name": "Florence Cathedral & Brunelleschi's Dome",
+          "type": "major",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "florence/duomo/arrival.txt",
+              "audio": "florence/duomo/arrival.mp3",
+              "words": 403
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "florence/duomo/history.txt",
+              "audio": "florence/duomo/history.mp3",
+              "words": 470
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "florence/duomo/architecture.txt",
+              "audio": "florence/duomo/architecture.mp3",
+              "words": 460
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "florence/duomo/stories.txt",
+              "audio": "florence/duomo/stories.mp3",
+              "words": 440
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "florence/duomo/what_to_notice.txt",
+              "audio": "florence/duomo/what_to_notice.mp3",
+              "words": 447
+            }
+          ],
+          "tips": "florence/duomo/tips.txt",
+          "photo": {
+            "file": "florence/duomo/photo.jpg",
+            "credit": {
+              "title": "File:Florence Duomo from Michelangelo hill.jpg",
+              "artist": "Petar Milo\u0161evi\u0107",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg"
+            }
+          }
+        },
+        {
+          "id": "ponte_vecchio",
+          "name": "Ponte Vecchio",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "florence/ponte_vecchio/short.txt",
+              "audio": "florence/ponte_vecchio/short.mp3",
+              "words": 671
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "florence/ponte_vecchio/photo.jpg",
+            "credit": {
+              "title": "File:Fireworks over Ponte Vecchio 2.JPG",
+              "artist": "Martin Falbisoner",
+              "license": "CC BY-SA 3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fireworks_over_Ponte_Vecchio_2.JPG"
+            }
+          }
+        },
+        {
+          "id": "piazza_signoria",
+          "name": "Piazza della Signoria",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "florence/piazza_signoria/short.txt",
+              "audio": "florence/piazza_signoria/short.mp3",
+              "words": 608
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "florence/piazza_signoria/photo.jpg",
+            "credit": {
+              "title": "File:Florence - David - t\u00eate.jpg",
+              "artist": "Eusebius",
+              "license": "CC BY 3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_-_David_-_t%C3%AAte.jpg"
+            }
+          }
+        },
+        {
+          "id": "piazzale_michelangelo",
+          "name": "Piazzale Michelangelo",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "florence/piazzale_michelangelo/short.txt",
+              "audio": "florence/piazzale_michelangelo/short.mp3",
+              "words": 663
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "florence/piazzale_michelangelo/photo.jpg",
+            "credit": {
+              "title": "File:Vista de Florencia desde Piazzale Michelangelo, Italia, 2022-09-18, DD 212-214 HDR.jpg",
+              "artist": "Diego Delso",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Florencia_desde_Piazzale_Michelangelo,_Italia,_2022-09-18,_DD_212-214_HDR.jpg"
+            }
+          }
+        },
+        {
+          "id": "uffizi",
+          "name": "Uffizi Gallery",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "florence/uffizi/arrival.txt",
+              "audio": "florence/uffizi/arrival.mp3",
+              "words": 459
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "florence/uffizi/history.txt",
+              "audio": "florence/uffizi/history.mp3",
+              "words": 468
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "florence/uffizi/architecture.txt",
+              "audio": "florence/uffizi/architecture.mp3",
+              "words": 489
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "florence/uffizi/stories.txt",
+              "audio": "florence/uffizi/stories.mp3",
+              "words": 536
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "florence/uffizi/what_to_notice.txt",
+              "audio": "florence/uffizi/what_to_notice.mp3",
+              "words": 511
+            }
+          ],
+          "tips": "florence/uffizi/tips.txt",
+          "photo": {
+            "file": "florence/uffizi/photo.jpg",
+            "credit": {
+              "title": "File:Uffizi Gallery - Daughter of Niobe bent by terror.jpg",
+              "artist": "Petar Milo\u0161evi\u0107",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uffizi_Gallery_-_Daughter_of_Niobe_bent_by_terror.jpg"
+            }
+          }
+        },
+        {
+          "id": "accademia",
+          "name": "Accademia Gallery (David)",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "florence/accademia/arrival.txt",
+              "audio": "florence/accademia/arrival.mp3",
+              "words": 431
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "florence/accademia/history.txt",
+              "audio": "florence/accademia/history.mp3",
+              "words": 479
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "florence/accademia/what_to_notice.txt",
+              "audio": "florence/accademia/what_to_notice.mp3",
+              "words": 499
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "florence/accademia/stories.txt",
+              "audio": "florence/accademia/stories.mp3",
+              "words": 535
+            }
+          ],
+          "tips": "florence/accademia/tips.txt",
+          "photo": {
+            "file": "florence/accademia/photo.jpg",
+            "credit": {
+              "title": "File:Michelangelo's David 2015.jpg",
+              "artist": "Livioandronico2013",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_David_2015.jpg"
+            }
+          }
+        },
+        {
+          "id": "pitti",
+          "name": "Pitti Palace & Boboli Gardens",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "florence/pitti/arrival.txt",
+              "audio": "florence/pitti/arrival.mp3",
+              "words": 475
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "florence/pitti/history.txt",
+              "audio": "florence/pitti/history.mp3",
+              "words": 481
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "florence/pitti/architecture.txt",
+              "audio": "florence/pitti/architecture.mp3",
+              "words": 509
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "florence/pitti/what_to_notice.txt",
+              "audio": "florence/pitti/what_to_notice.mp3",
+              "words": 556
+            }
+          ],
+          "tips": "florence/pitti/tips.txt",
+          "photo": {
+            "file": "florence/pitti/photo.jpg",
+            "credit": {
+              "title": "File:Palacio Pitti, Florencia, Italia, 2022-09-18, DD 197.jpg",
+              "artist": "Diego Delso",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Pitti,_Florencia,_Italia,_2022-09-18,_DD_197.jpg"
+            }
+          }
+        },
+        {
+          "id": "santa_croce",
+          "name": "Basilica of Santa Croce",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "florence/santa_croce/arrival.txt",
+              "audio": "florence/santa_croce/arrival.mp3",
+              "words": 425
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "florence/santa_croce/history.txt",
+              "audio": "florence/santa_croce/history.mp3",
+              "words": 532
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "florence/santa_croce/what_to_notice.txt",
+              "audio": "florence/santa_croce/what_to_notice.mp3",
+              "words": 547
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "florence/santa_croce/stories.txt",
+              "audio": "florence/santa_croce/stories.mp3",
+              "words": 620
+            }
+          ],
+          "tips": "florence/santa_croce/tips.txt",
+          "photo": {
+            "file": "florence/santa_croce/photo.jpg",
+            "credit": {
+              "title": "File:Basilica di Santa Croce (12437).jpg",
+              "artist": "Rhododendrites",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Croce_(12437).jpg"
+            }
+          }
+        },
+        {
+          "id": "san_lorenzo",
+          "name": "San Lorenzo & Medici Chapels",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "florence/san_lorenzo/arrival.txt",
+              "audio": "florence/san_lorenzo/arrival.mp3",
+              "words": 389
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "florence/san_lorenzo/history.txt",
+              "audio": "florence/san_lorenzo/history.mp3",
+              "words": 529
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "florence/san_lorenzo/architecture.txt",
+              "audio": "florence/san_lorenzo/architecture.mp3",
+              "words": 524
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "florence/san_lorenzo/what_to_notice.txt",
+              "audio": "florence/san_lorenzo/what_to_notice.mp3",
+              "words": 581
+            }
+          ],
+          "tips": "florence/san_lorenzo/tips.txt",
+          "photo": {
+            "file": "florence/san_lorenzo/photo.jpg",
+            "credit": {
+              "title": "File:Magi Chapel, Palazzo Medici Riccardi, Florence, Italy.jpg",
+              "artist": "Julian Lupyan",
+              "license": "CC0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magi_Chapel,_Palazzo_Medici_Riccardi,_Florence,_Italy.jpg"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "rome",
@@ -40,15 +684,831 @@
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:20140803_Rome_View_from_Janiculum_0286.jpg"
         }
       },
-      "sites": []
+      "sites": [
+        {
+          "id": "colosseum",
+          "name": "Colosseum",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/colosseum/arrival.txt",
+              "audio": "rome/colosseum/arrival.mp3",
+              "words": 366
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/colosseum/history.txt",
+              "audio": "rome/colosseum/history.mp3",
+              "words": 406
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "rome/colosseum/architecture.txt",
+              "audio": "rome/colosseum/architecture.mp3",
+              "words": 412
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "rome/colosseum/stories.txt",
+              "audio": "rome/colosseum/stories.mp3",
+              "words": 401
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/colosseum/what_to_notice.txt",
+              "audio": "rome/colosseum/what_to_notice.mp3",
+              "words": 404
+            }
+          ],
+          "tips": "rome/colosseum/tips.txt",
+          "photo": {
+            "file": "rome/colosseum/photo.jpg",
+            "credit": {
+              "title": "File:Colosseum in Rome, Italy - April 2007.jpg",
+              "artist": "Diliff",
+              "license": "CC BY-SA 2.5",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg"
+            }
+          }
+        },
+        {
+          "id": "roman_forum",
+          "name": "Roman Forum & Palatine Hill",
+          "type": "major",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/roman_forum/arrival.txt",
+              "audio": "rome/roman_forum/arrival.mp3",
+              "words": 388
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/roman_forum/history.txt",
+              "audio": "rome/roman_forum/history.mp3",
+              "words": 384
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/roman_forum/what_to_notice.txt",
+              "audio": "rome/roman_forum/what_to_notice.mp3",
+              "words": 400
+            },
+            {
+              "id": "bigger_picture",
+              "title": "The Bigger Picture",
+              "script": "rome/roman_forum/bigger_picture.txt",
+              "audio": "rome/roman_forum/bigger_picture.mp3",
+              "words": 397
+            }
+          ],
+          "tips": "rome/roman_forum/tips.txt",
+          "photo": {
+            "file": "rome/roman_forum/photo.jpg",
+            "credit": {
+              "title": "File:Foro Romano Musei Capitolini Roma.jpg",
+              "artist": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+              "license": "CC BY-SA 3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg"
+            }
+          }
+        },
+        {
+          "id": "vatican_museums",
+          "name": "Vatican Museums",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/vatican_museums/arrival.txt",
+              "audio": "rome/vatican_museums/arrival.mp3",
+              "words": 376
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/vatican_museums/history.txt",
+              "audio": "rome/vatican_museums/history.mp3",
+              "words": 402
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "rome/vatican_museums/architecture.txt",
+              "audio": "rome/vatican_museums/architecture.mp3",
+              "words": 386
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "rome/vatican_museums/stories.txt",
+              "audio": "rome/vatican_museums/stories.mp3",
+              "words": 430
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/vatican_museums/what_to_notice.txt",
+              "audio": "rome/vatican_museums/what_to_notice.mp3",
+              "words": 416
+            }
+          ],
+          "tips": "rome/vatican_museums/tips.txt",
+          "photo": {
+            "file": "rome/vatican_museums/photo.jpg",
+            "credit": {
+              "title": "File:Two Bacchantes and a Bull (Vatican Museums) September 2015.1a.jpg",
+              "artist": "Alvesgaspar",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Two_Bacchantes_and_a_Bull_(Vatican_Museums)_September_2015.1a.jpg"
+            }
+          }
+        },
+        {
+          "id": "sistine_chapel",
+          "name": "Sistine Chapel",
+          "type": "major",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/sistine_chapel/arrival.txt",
+              "audio": "rome/sistine_chapel/arrival.mp3",
+              "words": 398
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/sistine_chapel/history.txt",
+              "audio": "rome/sistine_chapel/history.mp3",
+              "words": 410
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/sistine_chapel/what_to_notice.txt",
+              "audio": "rome/sistine_chapel/what_to_notice.mp3",
+              "words": 419
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "rome/sistine_chapel/stories.txt",
+              "audio": "rome/sistine_chapel/stories.mp3",
+              "words": 494
+            }
+          ],
+          "tips": "rome/sistine_chapel/tips.txt",
+          "photo": {
+            "file": "rome/sistine_chapel/photo.jpg",
+            "credit": {
+              "title": "File:'Sistine Chapel ceiling' by Michelangelo JBU21.JPG",
+              "artist": "J\u00f6rg Bittner Unna",
+              "license": "CC BY 3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:%27Sistine_Chapel_ceiling%27_by_Michelangelo_JBU21.JPG"
+            }
+          }
+        },
+        {
+          "id": "st_peters",
+          "name": "St. Peter's Basilica",
+          "type": "major",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/st_peters/arrival.txt",
+              "audio": "rome/st_peters/arrival.mp3",
+              "words": 391
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/st_peters/history.txt",
+              "audio": "rome/st_peters/history.mp3",
+              "words": 423
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "rome/st_peters/architecture.txt",
+              "audio": "rome/st_peters/architecture.mp3",
+              "words": 453
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/st_peters/what_to_notice.txt",
+              "audio": "rome/st_peters/what_to_notice.mp3",
+              "words": 450
+            }
+          ],
+          "tips": "rome/st_peters/tips.txt",
+          "photo": {
+            "file": "rome/st_peters/photo.jpg",
+            "credit": {
+              "title": "File:S. Pietro May 2022-15.jpg",
+              "artist": "Alvesgaspar",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:S._Pietro_May_2022-15.jpg"
+            }
+          }
+        },
+        {
+          "id": "trevi",
+          "name": "Trevi Fountain",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "rome/trevi/short.txt",
+              "audio": "rome/trevi/short.mp3",
+              "words": 625
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "rome/trevi/photo.jpg",
+            "credit": {
+              "title": "File:Fuente de Trevi, Roma, Italia, 2022-09-15, DD 02.jpg",
+              "artist": "Diego Delso",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fuente_de_Trevi,_Roma,_Italia,_2022-09-15,_DD_02.jpg"
+            }
+          }
+        },
+        {
+          "id": "pantheon",
+          "name": "Pantheon",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/pantheon/arrival.txt",
+              "audio": "rome/pantheon/arrival.mp3",
+              "words": 370
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/pantheon/history.txt",
+              "audio": "rome/pantheon/history.mp3",
+              "words": 394
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/pantheon/what_to_notice.txt",
+              "audio": "rome/pantheon/what_to_notice.mp3",
+              "words": 422
+            }
+          ],
+          "tips": "rome/pantheon/tips.txt",
+          "photo": {
+            "file": "rome/pantheon/photo.jpg",
+            "credit": {
+              "title": "File:Pantheon Rom 1 cropped.jpg",
+              "artist": "Rabax63",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pantheon_Rom_1_cropped.jpg"
+            }
+          }
+        },
+        {
+          "id": "piazza_navona",
+          "name": "Piazza Navona",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "rome/piazza_navona/short.txt",
+              "audio": "rome/piazza_navona/short.mp3",
+              "words": 684
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "rome/piazza_navona/photo.jpg",
+            "credit": {
+              "title": "File:Rome (Italy), Piazza Navona -- 2013 -- 4418.jpg",
+              "artist": "Dietmar Rabich",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rome_(Italy),_Piazza_Navona_--_2013_--_4418.jpg"
+            }
+          }
+        },
+        {
+          "id": "castel_sant_angelo",
+          "name": "Castel Sant'Angelo",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/castel_sant_angelo/arrival.txt",
+              "audio": "rome/castel_sant_angelo/arrival.mp3",
+              "words": 430
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/castel_sant_angelo/history.txt",
+              "audio": "rome/castel_sant_angelo/history.mp3",
+              "words": 576
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "rome/castel_sant_angelo/architecture.txt",
+              "audio": "rome/castel_sant_angelo/architecture.mp3",
+              "words": 533
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/castel_sant_angelo/what_to_notice.txt",
+              "audio": "rome/castel_sant_angelo/what_to_notice.mp3",
+              "words": 521
+            }
+          ],
+          "tips": "rome/castel_sant_angelo/tips.txt",
+          "photo": {
+            "file": "rome/castel_sant_angelo/photo.jpg",
+            "credit": {
+              "title": "File:StAngelo Bridge Rome.jpg",
+              "artist": "AngMoKio",
+              "license": "CC BY-SA 2.5",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:StAngelo_Bridge_Rome.jpg"
+            }
+          }
+        },
+        {
+          "id": "borghese",
+          "name": "Galleria Borghese",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/borghese/arrival.txt",
+              "audio": "rome/borghese/arrival.mp3",
+              "words": 421
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/borghese/history.txt",
+              "audio": "rome/borghese/history.mp3",
+              "words": 487
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "rome/borghese/stories.txt",
+              "audio": "rome/borghese/stories.mp3",
+              "words": 590
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/borghese/what_to_notice.txt",
+              "audio": "rome/borghese/what_to_notice.mp3",
+              "words": 559
+            }
+          ],
+          "tips": "rome/borghese/tips.txt",
+          "photo": {
+            "file": "rome/borghese/photo.jpg",
+            "credit": {
+              "title": "File:Galleria borghese facade.jpg",
+              "artist": "Alessio Damato",
+              "license": "CC BY-SA 3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Galleria_borghese_facade.jpg"
+            }
+          }
+        },
+        {
+          "id": "capitoline",
+          "name": "Capitoline Hill & Museums",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "rome/capitoline/arrival.txt",
+              "audio": "rome/capitoline/arrival.mp3",
+              "words": 456
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "rome/capitoline/history.txt",
+              "audio": "rome/capitoline/history.mp3",
+              "words": 553
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "rome/capitoline/architecture.txt",
+              "audio": "rome/capitoline/architecture.mp3",
+              "words": 569
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "rome/capitoline/what_to_notice.txt",
+              "audio": "rome/capitoline/what_to_notice.mp3",
+              "words": 547
+            }
+          ],
+          "tips": "rome/capitoline/tips.txt",
+          "photo": {
+            "file": "rome/capitoline/photo.jpg",
+            "credit": {
+              "title": "File:Marcus Aurelius Capitoline Hill September 2015-1.jpg",
+              "artist": "Alvesgaspar",
+              "license": "Public domain",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Capitoline_Hill_September_2015-1.jpg"
+            }
+          }
+        },
+        {
+          "id": "spanish_steps",
+          "name": "Spanish Steps",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "rome/spanish_steps/short.txt",
+              "audio": "rome/spanish_steps/short.mp3",
+              "words": 651
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "rome/spanish_steps/photo.jpg",
+            "credit": {
+              "title": "File:Spanish Steps, Rome, September 1965.jpg",
+              "artist": "Please credit \"Family photos of Infrogmation\"",
+              "license": "CC BY 2.5",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spanish_Steps,_Rome,_September_1965.jpg"
+            }
+          }
+        },
+        {
+          "id": "trastevere",
+          "name": "Trastevere",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "rome/trastevere/short.txt",
+              "audio": "rome/trastevere/short.mp3",
+              "words": 633
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "rome/trastevere/photo.jpg",
+            "credit": {
+              "title": "File:Santa Maria in Trastevere church in Rome (12).jpg",
+              "artist": "Krzysztof Golik",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Trastevere_church_in_Rome_(12).jpg"
+            }
+          }
+        },
+        {
+          "id": "santa_maria_maggiore",
+          "name": "Santa Maria Maggiore",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "rome/santa_maria_maggiore/short.txt",
+              "audio": "rome/santa_maria_maggiore/short.mp3",
+              "words": 658
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "rome/santa_maria_maggiore/photo.jpg",
+            "credit": {
+              "title": "File:Dome of Cappella Paolina in Santa Maria Maggiore (Roma).jpg",
+              "artist": "",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_Cappella_Paolina_in_Santa_Maria_Maggiore_(Roma).jpg"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "naples",
       "name": "Naples & Pompeii",
       "blurb": "Vesuvius's shadow, ancient Roman daily life frozen in ash, and a city that defies tourism.",
-      "chapters": [],
-      "photo": null,
-      "sites": []
+      "chapters": [
+        {
+          "id": "overview",
+          "title": "About the City",
+          "script": "naples/overview.txt",
+          "audio": "naples/overview.mp3",
+          "words": 1397
+        }
+      ],
+      "photo": {
+        "file": "naples/photo.jpg",
+        "credit": {
+          "title": "File:Skyline Napoli.jpg",
+          "artist": "Shapiro1983 at Italian Wikipedia",
+          "license": "Public domain",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skyline_Napoli.jpg"
+        }
+      },
+      "sites": [
+        {
+          "id": "pompeii",
+          "name": "Pompeii",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "naples/pompeii/arrival.txt",
+              "audio": "naples/pompeii/arrival.mp3",
+              "words": 450
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "naples/pompeii/history.txt",
+              "audio": "naples/pompeii/history.mp3",
+              "words": 508
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "naples/pompeii/architecture.txt",
+              "audio": "naples/pompeii/architecture.mp3",
+              "words": 546
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "naples/pompeii/stories.txt",
+              "audio": "naples/pompeii/stories.mp3",
+              "words": 498
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "naples/pompeii/what_to_notice.txt",
+              "audio": "naples/pompeii/what_to_notice.mp3",
+              "words": 547
+            },
+            {
+              "id": "bigger_picture",
+              "title": "The Bigger Picture",
+              "script": "naples/pompeii/bigger_picture.txt",
+              "audio": "naples/pompeii/bigger_picture.mp3",
+              "words": 516
+            }
+          ],
+          "tips": "naples/pompeii/tips.txt",
+          "photo": {
+            "file": "naples/pompeii/photo.jpg",
+            "credit": {
+              "title": "File:Casa di Ottavio Quartione (Pompeii) - Giardino (Pompeii).jpg",
+              "artist": "Commonists",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casa_di_Ottavio_Quartione_(Pompeii)_-_Giardino_(Pompeii).jpg"
+            }
+          }
+        },
+        {
+          "id": "naples_centro",
+          "name": "Naples Historic Center (Spaccanapoli)",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "naples/naples_centro/short.txt",
+              "audio": "naples/naples_centro/short.mp3",
+              "words": 650
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "naples/naples_centro/photo.jpg",
+            "credit": {
+              "title": "File:Spaccanapoli b&l.jpg",
+              "artist": "https://www.flickr.com/photos/bluely/",
+              "license": "CC BY-SA 2.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spaccanapoli_b%26l.jpg"
+            }
+          }
+        },
+        {
+          "id": "vesuvius",
+          "name": "Mount Vesuvius",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "naples/vesuvius/short.txt",
+              "audio": "naples/vesuvius/short.mp3",
+              "words": 617
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "naples/vesuvius/photo.jpg",
+            "credit": {
+              "title": "File:The harbor of Naples and Vesuvius at dawn. Italy.jpg",
+              "artist": "\u0412\u0432\u043b\u0430\u0441\u0435\u043d\u043a\u043e",
+              "license": "CC BY-SA 3.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_harbor_of_Naples_and_Vesuvius_at_dawn._Italy.jpg"
+            }
+          }
+        },
+        {
+          "id": "archaeological_museum",
+          "name": "National Archaeological Museum",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "naples/archaeological_museum/arrival.txt",
+              "audio": "naples/archaeological_museum/arrival.mp3",
+              "words": 502
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "naples/archaeological_museum/history.txt",
+              "audio": "naples/archaeological_museum/history.mp3",
+              "words": 478
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "naples/archaeological_museum/what_to_notice.txt",
+              "audio": "naples/archaeological_museum/what_to_notice.mp3",
+              "words": 612
+            },
+            {
+              "id": "stories",
+              "title": "Stories & Legends",
+              "script": "naples/archaeological_museum/stories.txt",
+              "audio": "naples/archaeological_museum/stories.mp3",
+              "words": 529
+            }
+          ],
+          "tips": "naples/archaeological_museum/tips.txt",
+          "photo": {
+            "file": "naples/archaeological_museum/photo.jpg",
+            "credit": {
+              "title": "File:(Venice) Greek antiquities in the Museo Archeologico Nazionale (Venice) - Head of an athlete.jpg",
+              "artist": "Didier Descouens",
+              "license": "Public domain",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:(Venice)_Greek_antiquities_in_the_Museo_Archeologico_Nazionale_(Venice)_-_Head_of_an_athlete.jpg"
+            }
+          }
+        },
+        {
+          "id": "herculaneum",
+          "name": "Herculaneum",
+          "type": "major",
+          "ticketed": true,
+          "chapters": [
+            {
+              "id": "arrival",
+              "title": "Arrival & Orientation",
+              "script": "naples/herculaneum/arrival.txt",
+              "audio": "naples/herculaneum/arrival.mp3",
+              "words": 469
+            },
+            {
+              "id": "history",
+              "title": "History",
+              "script": "naples/herculaneum/history.txt",
+              "audio": "naples/herculaneum/history.mp3",
+              "words": 484
+            },
+            {
+              "id": "architecture",
+              "title": "Architecture & Key Features",
+              "script": "naples/herculaneum/architecture.txt",
+              "audio": "naples/herculaneum/architecture.mp3",
+              "words": 595
+            },
+            {
+              "id": "what_to_notice",
+              "title": "What to Notice",
+              "script": "naples/herculaneum/what_to_notice.txt",
+              "audio": "naples/herculaneum/what_to_notice.mp3",
+              "words": 548
+            }
+          ],
+          "tips": "naples/herculaneum/tips.txt",
+          "photo": {
+            "file": "naples/herculaneum/photo.jpg",
+            "credit": {
+              "title": "File:Antigua ciudad de Herculano, Italia, 2023-03-27, DD 141.jpg",
+              "artist": "Diego Delso",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Antigua_ciudad_de_Herculano,_Italia,_2023-03-27,_DD_141.jpg"
+            }
+          }
+        },
+        {
+          "id": "cappella_sansevero",
+          "name": "Cappella Sansevero (Veiled Christ)",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "naples/cappella_sansevero/short.txt",
+              "audio": "naples/cappella_sansevero/short.mp3",
+              "words": 616
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "naples/cappella_sansevero/photo.jpg",
+            "credit": {
+              "title": "File:Cappella Sansevero (15041603867).jpg",
+              "artist": "David Sivyer from United Kingdom",
+              "license": "CC BY-SA 2.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cappella_Sansevero_(15041603867).jpg"
+            }
+          }
+        },
+        {
+          "id": "castel_nuovo",
+          "name": "Castel Nuovo",
+          "type": "short",
+          "ticketed": false,
+          "chapters": [
+            {
+              "id": "short",
+              "title": "Tour",
+              "script": "naples/castel_nuovo/short.txt",
+              "audio": "naples/castel_nuovo/short.mp3",
+              "words": 591
+            }
+          ],
+          "tips": null,
+          "photo": {
+            "file": "naples/castel_nuovo/photo.jpg",
+            "credit": {
+              "title": "File:Castel Nuovo (Maschio Angioino), Entrance, Naples (5257).jpg",
+              "artist": "Marco Ober",
+              "license": "CC BY-SA 4.0",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Castel_Nuovo_(Maschio_Angioino),_Entrance,_Naples_(5257).jpg"
+            }
+          }
+        }
+      ]
     }
   ]
 }
