@@ -133,7 +133,7 @@ cities:
     name: Rome
     blurb: Three thousand years of history layered into a single walkable city.
     chapters: [overview]
-    photo_query: "Rome skyline"
+    photo_query: "Rome from Janiculum"
     sites:
       - id: colosseum
         name: Colosseum
